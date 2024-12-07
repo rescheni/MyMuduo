@@ -8,7 +8,7 @@
 namespace mymuduo {
 
 	// static  该文件内 
-	static string LevelToString(int level)
+	static std::string LevelToString(int level)
 	{
 		
 		switch (level) {

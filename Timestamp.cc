@@ -33,11 +33,3 @@ namespace mymuduo {
 		return buffer;
 	}
 }
-
-#include <iostream>
-
-int main()
-{
-	std::cout << mymuduo::Timestamp::now().toString() << std::endl;
-	return 0;
-}
