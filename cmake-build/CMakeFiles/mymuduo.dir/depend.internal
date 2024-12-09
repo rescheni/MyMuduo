@@ -8,12 +8,16 @@ CMakeFiles/mymuduo.dir/Channel.o
  /home/reschen/muduo/mymuduo/Timestamp.h
  /home/reschen/muduo/mymuduo/logger.h
  /home/reschen/muduo/mymuduo/noncopyable.h
+CMakeFiles/mymuduo.dir/CurrentThread.o
+ /home/reschen/muduo/mymuduo/CurrentThread.cc
+ /home/reschen/muduo/mymuduo/CurrentThread.h
 CMakeFiles/mymuduo.dir/DefaultPoller.o
  /home/reschen/muduo/mymuduo/DefaultPoller.cc
  /home/reschen/muduo/mymuduo/Poller.h
  /home/reschen/muduo/mymuduo/Timestamp.h
  /home/reschen/muduo/mymuduo/noncopyable.h
 CMakeFiles/mymuduo.dir/EPollPoller.o
+ /home/reschen/muduo/mymuduo/Channel.h
  /home/reschen/muduo/mymuduo/EPollPoller.cc
  /home/reschen/muduo/mymuduo/EPollPoller.h
  /home/reschen/muduo/mymuduo/EventLoop.h

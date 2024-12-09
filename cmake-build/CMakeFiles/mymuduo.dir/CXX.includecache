@@ -28,6 +28,16 @@ noncopyable.h
 Timestamp.h
 /home/reschen/muduo/mymuduo/Timestamp.h
 
+/home/reschen/muduo/mymuduo/CurrentThread.cc
+CurrentThread.h
+/home/reschen/muduo/mymuduo/CurrentThread.h
+
+/home/reschen/muduo/mymuduo/CurrentThread.h
+sys/syscall.h
+-
+unistd.h
+-
+
 /home/reschen/muduo/mymuduo/DefaultPoller.cc
 Poller.h
 /home/reschen/muduo/mymuduo/Poller.h
@@ -41,9 +51,13 @@ EPollPoller.h
 /home/reschen/muduo/mymuduo/EPollPoller.h
 logger.h
 /home/reschen/muduo/mymuduo/logger.h
+Channel.h
+/home/reschen/muduo/mymuduo/Channel.h
 cerrno
 -
 unistd.h
+-
+cstring
 -
 
 /home/reschen/muduo/mymuduo/EPollPoller.h
