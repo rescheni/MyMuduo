@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/reschen/muduo/mymuduo/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -std=gnu++11 -o CMakeFiles/mymuduo.dir/EventLoopThread.o -c /home/reschen/muduo/mymuduo/EventLoopThread.cc",
+  "file": "/home/reschen/muduo/mymuduo/EventLoopThread.cc"
+},
+{
+  "directory": "/home/reschen/muduo/mymuduo/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -std=gnu++11 -o CMakeFiles/mymuduo.dir/EPollPoller.o -c /home/reschen/muduo/mymuduo/EPollPoller.cc",
   "file": "/home/reschen/muduo/mymuduo/EPollPoller.cc"
 },
@@ -21,8 +26,18 @@
 },
 {
   "directory": "/home/reschen/muduo/mymuduo/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -std=gnu++11 -o CMakeFiles/mymuduo.dir/Thread.o -c /home/reschen/muduo/mymuduo/Thread.cc",
+  "file": "/home/reschen/muduo/mymuduo/Thread.cc"
+},
+{
+  "directory": "/home/reschen/muduo/mymuduo/build",
   "command": "/usr/bin/g++   -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -std=gnu++11 -o CMakeFiles/mymuduo.dir/InetAddress.o -c /home/reschen/muduo/mymuduo/InetAddress.cc",
   "file": "/home/reschen/muduo/mymuduo/InetAddress.cc"
+},
+{
+  "directory": "/home/reschen/muduo/mymuduo/build",
+  "command": "/usr/bin/g++   -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -std=gnu++11 -o CMakeFiles/mymuduo.dir/EventLoopThreadPool.o -c /home/reschen/muduo/mymuduo/EventLoopThreadPool.cc",
+  "file": "/home/reschen/muduo/mymuduo/EventLoopThreadPool.cc"
 },
 {
   "directory": "/home/reschen/muduo/mymuduo/build",

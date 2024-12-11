@@ -3,6 +3,7 @@
 #include <functional>
 #include <atomic>
 #include <memory>
+#include <vector>
 #include <mutex>
 
 #include "noncopyable.h"

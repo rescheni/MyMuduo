@@ -142,11 +142,8 @@ namespace mymuduo{
         if(isInLoopThread() || callingPendingFunctions_)   // 代表 当前的 Loop 正在执行 回调 但是 又有新的回调
         {
             wakeup();       // 唤醒 loop 所在的线程
-        }
-
-        
+        }   
     }
-
 
     void EventLoop::handleRead()
     {
@@ -158,8 +155,6 @@ namespace mymuduo{
         }
 
     }
-
-
 
     // 唤醒loop 所在的线程
     void EventLoop::wakeup()
