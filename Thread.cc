@@ -6,7 +6,7 @@
 namespace mymuduo
 {
 
-    static std::atomic_int numCreated_;
+    static std::atomic_int numCreated_(0);
 
     Thread::Thread(ThreadFunc func,const std::string &name)
         : started_(false)
