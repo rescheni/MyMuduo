@@ -182,7 +182,8 @@ namespace mymuduo{
     
     bool EventLoop::hasChannel(Channel * channel)
     {
-        poller_->hasChannel(channel);
+        return poller_->hasChannel(channel);
+        
     }
 
     void EventLoop::doPendingFunctors()		// 执行回调函数

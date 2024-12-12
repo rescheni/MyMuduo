@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/reschen/muduo/mymuduo/Acceptor.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Acceptor.o"
+  "/home/reschen/muduo/mymuduo/Buffer.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Buffer.o"
   "/home/reschen/muduo/mymuduo/Channel.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Channel.o"
   "/home/reschen/muduo/mymuduo/CurrentThread.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/CurrentThread.o"
   "/home/reschen/muduo/mymuduo/DefaultPoller.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/DefaultPoller.o"
@@ -15,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/reschen/muduo/mymuduo/InetAddress.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/InetAddress.o"
   "/home/reschen/muduo/mymuduo/Poller.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Poller.o"
   "/home/reschen/muduo/mymuduo/Socket.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Socket.o"
+  "/home/reschen/muduo/mymuduo/TcpConnection.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/TcpConnection.o"
   "/home/reschen/muduo/mymuduo/TcpServer.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/TcpServer.o"
   "/home/reschen/muduo/mymuduo/Thread.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Thread.o"
   "/home/reschen/muduo/mymuduo/Timestamp.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Timestamp.o"

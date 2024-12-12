@@ -18,6 +18,7 @@
 
 namespace mymuduo {
 
+
 	// 对外部 TCP 服务器 编程 提供的 类
 	class TcpServer :noncopyable
 	{
@@ -33,6 +34,7 @@ namespace mymuduo {
 
 			TcpServer(EventLoop *loop,
 					const InetAddress & listenAddr,
+					const std::string nameArg,
 					Option option = kNoReusePort);
 			~TcpServer();
 
@@ -51,9 +53,9 @@ namespace mymuduo {
 
 		private:
 
-			void newConnection(int sockfd,consst );
-			void removeConnection();
-			void removeConnectionInLoop();	
+			void newConnection(int sockfd,const InetAddress & peerAddress);
+			void removeConnection(const TcpConnectionPtr & conn);
+			void removeConnectionInLoop(const TcpConnection & conn);	
 
 
 		private:
@@ -64,7 +66,7 @@ namespace mymuduo {
 			const std::string ipPort_;
 			const std::string name_;
 			std::unique_ptr<Acceptor> acceptor_;				// in mainloop 监听新的连接事件 
-			std::shared_ptr<EventLoopThreadPool> threadPool;  //	one per Thread
+			std::shared_ptr<EventLoopThreadPool> threadPool_;  //	one per Thread
 
 			ConnectionCallback connectionCallback_;			// 有新连接时的 回调
 			MessageCallback messageCallback_;				// 有读写消息时的回调
@@ -74,7 +76,7 @@ namespace mymuduo {
 
 			std::atomic_int  started_;
 
-			int nextConnid;
+			int nextConnId_;
 
 			ConnectionMap connects_ ; 	//	保存所有的连接
 
