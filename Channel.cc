@@ -44,7 +44,7 @@ namespace mymuduo {
 		
 		// ADD code ...
 
-//		loop_.updateChannel(this);
+		loop_->updateChannel(this);
 
 	}
 

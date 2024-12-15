@@ -1,35 +1,38 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/reschen/muduo/mymuduo/Acceptor.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Acceptor.o"
-  "/home/reschen/muduo/mymuduo/Buffer.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Buffer.o"
-  "/home/reschen/muduo/mymuduo/Channel.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Channel.o"
-  "/home/reschen/muduo/mymuduo/CurrentThread.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/CurrentThread.o"
-  "/home/reschen/muduo/mymuduo/DefaultPoller.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/DefaultPoller.o"
-  "/home/reschen/muduo/mymuduo/EPollPoller.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/EPollPoller.o"
-  "/home/reschen/muduo/mymuduo/EventLoop.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/EventLoop.o"
-  "/home/reschen/muduo/mymuduo/EventLoopThread.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/EventLoopThread.o"
-  "/home/reschen/muduo/mymuduo/EventLoopThreadPool.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/EventLoopThreadPool.o"
-  "/home/reschen/muduo/mymuduo/InetAddress.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/InetAddress.o"
-  "/home/reschen/muduo/mymuduo/Poller.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Poller.o"
-  "/home/reschen/muduo/mymuduo/Socket.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Socket.o"
-  "/home/reschen/muduo/mymuduo/TcpConnection.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/TcpConnection.o"
-  "/home/reschen/muduo/mymuduo/TcpServer.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/TcpServer.o"
-  "/home/reschen/muduo/mymuduo/Thread.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Thread.o"
-  "/home/reschen/muduo/mymuduo/Timestamp.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/Timestamp.o"
-  "/home/reschen/muduo/mymuduo/logger.cc" "/home/reschen/muduo/mymuduo/cmake-build/CMakeFiles/mymuduo.dir/logger.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/reschen/muduo/mymuduo/Acceptor.cc" "CMakeFiles/mymuduo.dir/Acceptor.o" "gcc" "CMakeFiles/mymuduo.dir/Acceptor.o.d"
+  "/home/reschen/muduo/mymuduo/Buffer.cc" "CMakeFiles/mymuduo.dir/Buffer.o" "gcc" "CMakeFiles/mymuduo.dir/Buffer.o.d"
+  "/home/reschen/muduo/mymuduo/Channel.cc" "CMakeFiles/mymuduo.dir/Channel.o" "gcc" "CMakeFiles/mymuduo.dir/Channel.o.d"
+  "/home/reschen/muduo/mymuduo/CurrentThread.cc" "CMakeFiles/mymuduo.dir/CurrentThread.o" "gcc" "CMakeFiles/mymuduo.dir/CurrentThread.o.d"
+  "/home/reschen/muduo/mymuduo/DefaultPoller.cc" "CMakeFiles/mymuduo.dir/DefaultPoller.o" "gcc" "CMakeFiles/mymuduo.dir/DefaultPoller.o.d"
+  "/home/reschen/muduo/mymuduo/EPollPoller.cc" "CMakeFiles/mymuduo.dir/EPollPoller.o" "gcc" "CMakeFiles/mymuduo.dir/EPollPoller.o.d"
+  "/home/reschen/muduo/mymuduo/EventLoop.cc" "CMakeFiles/mymuduo.dir/EventLoop.o" "gcc" "CMakeFiles/mymuduo.dir/EventLoop.o.d"
+  "/home/reschen/muduo/mymuduo/EventLoopThread.cc" "CMakeFiles/mymuduo.dir/EventLoopThread.o" "gcc" "CMakeFiles/mymuduo.dir/EventLoopThread.o.d"
+  "/home/reschen/muduo/mymuduo/EventLoopThreadPool.cc" "CMakeFiles/mymuduo.dir/EventLoopThreadPool.o" "gcc" "CMakeFiles/mymuduo.dir/EventLoopThreadPool.o.d"
+  "/home/reschen/muduo/mymuduo/InetAddress.cc" "CMakeFiles/mymuduo.dir/InetAddress.o" "gcc" "CMakeFiles/mymuduo.dir/InetAddress.o.d"
+  "/home/reschen/muduo/mymuduo/Poller.cc" "CMakeFiles/mymuduo.dir/Poller.o" "gcc" "CMakeFiles/mymuduo.dir/Poller.o.d"
+  "/home/reschen/muduo/mymuduo/Socket.cc" "CMakeFiles/mymuduo.dir/Socket.o" "gcc" "CMakeFiles/mymuduo.dir/Socket.o.d"
+  "/home/reschen/muduo/mymuduo/TcpConnection.cc" "CMakeFiles/mymuduo.dir/TcpConnection.o" "gcc" "CMakeFiles/mymuduo.dir/TcpConnection.o.d"
+  "/home/reschen/muduo/mymuduo/TcpServer.cc" "CMakeFiles/mymuduo.dir/TcpServer.o" "gcc" "CMakeFiles/mymuduo.dir/TcpServer.o.d"
+  "/home/reschen/muduo/mymuduo/Thread.cc" "CMakeFiles/mymuduo.dir/Thread.o" "gcc" "CMakeFiles/mymuduo.dir/Thread.o.d"
+  "/home/reschen/muduo/mymuduo/Timestamp.cc" "CMakeFiles/mymuduo.dir/Timestamp.o" "gcc" "CMakeFiles/mymuduo.dir/Timestamp.o.d"
+  "/home/reschen/muduo/mymuduo/logger.cc" "CMakeFiles/mymuduo.dir/logger.o" "gcc" "CMakeFiles/mymuduo.dir/logger.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

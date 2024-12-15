@@ -30,8 +30,6 @@ namespace mymuduo
             {}
 
             ~Buffer();
-
-
             size_t readableBytes() const
             {
                 return writerIndex_ - readerIndex_ ;
@@ -39,30 +37,16 @@ namespace mymuduo
 
             size_t writeableBytes() const
             {
-                return buffer_.size() - writerIndex_ ;
+                return buffer_.size() - writerIndex_;
             }
 			size_t prependableBytes() const
 			{
 				return  readerIndex_;
 			}
+			ssize_t readFd(int fd,int * saveErrno);
 
-		private:
-			// 	it.operator *  
-			// 	// 返回的 是vector容器 内部 元素数组的地址
-			char * begin()
-			{
-				return &*buffer_.begin();
-			}
+			ssize_t writeFd(int fd,int *saveErrno);
 
-			const char * begin() const
-			{
-				return &*buffer_.begin();
-			}
-
-			const char* peek() const 
-			{
-				return  begin() + readerIndex_;
-			}
 			
 			//	onMessage string < Buffer
 			void retrieve(size_t len)
@@ -124,10 +108,25 @@ namespace mymuduo
 			{
 				return  begin() + writerIndex_;
 			}
-			ssize_t readFd(int fd , int  * save);
 
 
 		private:
+			// 	it.operator *  
+			// 	// 返回的 是vector容器 内部 元素数组的地址
+			char * begin()
+			{
+				return &*buffer_.begin();
+			}
+
+			const char * begin() const
+			{
+				return &*buffer_.begin();
+			}
+
+			const char* peek() const 
+			{
+				return  begin() + readerIndex_;
+			}
 
 			void makeSpace(size_t len)	// !!!!
 			{
@@ -142,8 +141,6 @@ namespace mymuduo
 					writerIndex_ = readerIndex_ + readable;
 				}
 			}
-
-
         private:
             std::vector<char> buffer_;
             size_t readerIndex_;

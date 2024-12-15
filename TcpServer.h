@@ -18,7 +18,6 @@
 
 namespace mymuduo {
 
-
 	// 对外部 TCP 服务器 编程 提供的 类
 	class TcpServer :noncopyable
 	{
@@ -46,7 +45,6 @@ namespace mymuduo {
 			// 设置底层subloop 的个数
 			void setThreadNum (int 	numThread); 
 
-
 			// 开启服务器 监听
 			void start();
 
@@ -55,7 +53,7 @@ namespace mymuduo {
 
 			void newConnection(int sockfd,const InetAddress & peerAddress);
 			void removeConnection(const TcpConnectionPtr & conn);
-			void removeConnectionInLoop(const TcpConnection & conn);	
+			void removeConnectionInLoop(const TcpConnectionPtr & conn);	
 
 
 		private:

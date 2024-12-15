@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <errno.h>
 #include <sys/uio.h>
+#include <unistd.h>
 
 namespace mymuduo
 {
@@ -41,4 +42,23 @@ namespace mymuduo
 
 		return n;
 	}
+
+
+		ssize_t Buffer::writeFd(int fd,int *saveErrno)
+		{
+			ssize_t n = ::write(fd,peek(),readableBytes());
+			if(n < 0)
+			{
+				* saveErrno = errno;
+			}
+			return n;
+		}
+
+
+
+
+
+
+
+
 } // namespace mymuduo
