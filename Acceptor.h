@@ -25,7 +25,9 @@ namespace mymuduo
             ~Acceptor();
 
             void setNewConnectCallback(const NewConnectionCallback & cb){
-                newConnectionCallback_ = std::move(cb);
+                // newConnectionCallback_ = std::move(cb);
+                newConnectionCallback_ = cb;
+
             }
 
             bool listening () {return listenning_;}
@@ -42,9 +44,5 @@ namespace mymuduo
             Channel acceptChannel_;
             NewConnectionCallback newConnectionCallback_;
             bool listenning_;
-
-
     };
-    
-    
 } // namespace mymuduo

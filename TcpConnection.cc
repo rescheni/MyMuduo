@@ -37,7 +37,7 @@ namespace mymuduo
             std::bind(&TcpConnection::handleRead,this,std::placeholders::_1)
         );
         channel_->setWriteCallback(
-            std::bind(&TcpConnection::handleClose,this)
+            std::bind(&TcpConnection::handleWrite,this)
         );
         channel_->setCloseCallback(
             std::bind(&TcpConnection::handleClose,this)
@@ -83,6 +83,7 @@ namespace mymuduo
 
     void TcpConnection::handleWrite()
     {
+        LOG_DEBUG("TcpConnection::handleWrite() ===========> IN");
         if(channel_->isWriting())
         {
             int savedErrno = 0;
@@ -99,6 +100,10 @@ namespace mymuduo
                             std::bind(writeComplateCallback_,shared_from_this())
                         );
                     }
+                    if(state_ == kDisconnecting)
+                    {
+                        shutdownInLoop();
+                    }
                 }
             }
             else {
@@ -107,6 +112,7 @@ namespace mymuduo
         }else{
             LOG_ERROR("Tcp Connection fd=%d is down ,no more warining \n",channel_->fd());
         }
+        LOG_DEBUG("TcpConnection::handleWrite() ===========> OUT");
     }
 
 
@@ -141,10 +147,13 @@ namespace mymuduo
 
     void TcpConnection::send(const std::string & buffer)
     {
+
+        LOG_DEBUG("state_ == kConnected ? = %s",state_ == kConnected?"Yes":"No");
         if(state_ == kConnected)
         {
             if(loop_->isInLoopThread())
             {
+                LOG_DEBUG("Runing ======runInLoop============> OK");
                 sendInLoop(buffer.c_str(),buffer.size());
             }
             else
@@ -155,12 +164,17 @@ namespace mymuduo
                     buffer.c_str(),
                     buffer.size()
                 ));
+
             }
         }
     }
     // 发送数据 应用  写的块 而内核数据 发送数据慢 将 发送数据写入缓冲区，并且设置了  水位回调
     void TcpConnection::sendInLoop(const void * message,size_t len)
     {
+
+
+        LOG_DEBUG("IN TcpConnection::sendInLoop ============> OK!!");
+
         size_t nwrote = 0;
         size_t remaining = len;
         bool faultError = false;
@@ -172,10 +186,12 @@ namespace mymuduo
             return;
         }
 
+        LOG_DEBUG("channel_->isWriting() = %s | readableBytes = %ld",channel_->isReading()?"Yes":"NO",outputbuffer_.readableBytes());
+
         //  表示第一次开始写数据 并且缓冲区没有待发送的数据
-        if(! channel_->isReading() && outputbuffer_.readableBytes() == 0)
+        if(! channel_->isWriting() && outputbuffer_.readableBytes() == 0)
         {
-            nwrote = write(channel_->fd(),message,len);
+            nwrote = ::write(channel_->fd(),message,len);
             if(nwrote >= 0)
             {
                 remaining = len - nwrote;
@@ -184,7 +200,10 @@ namespace mymuduo
                     loop_->queeueInLoop(
                         std::bind(writeComplateCallback_,shared_from_this())
                     );
+                    LOG_DEBUG("数据发送完毕===========> OK");
+
                 }
+                LOG_DEBUG("sendOK===============> nwrote=%d , message=%s",(int)nwrote,(char *)message);
             }
             else{ // nwrote < 0 
                 nwrote = 0;
@@ -216,21 +235,14 @@ namespace mymuduo
                             std::bind(hightWateMarkCallback_, shared_from_this(), oldlen+remaining)
                         );
                 }
-
                 outputbuffer_.append((char*)message + nwrote,remaining);
 
                 if(!channel_->isWriting())
                 {
-                    channel_->enableReading(); // 注册channel 的写事件  否则 poller 不会给 channel 通知 epollout
-
+                    channel_->enableWriting(); // 注册channel 的写事件  否则 poller 不会给 channel 通知 epollout
                 }
-
-                
             }
-
         }
-
-
     }
 
 
@@ -242,7 +254,8 @@ namespace mymuduo
 
         channel_->enableReading();  // 向poller注册 channel的epollin事件
         // 新连接建立 
-        channel_->enableReading();      // 向poller 注册 channel 的 epollin 事件
+
+        connectionCallback_(shared_from_this());
 
     }
 	
@@ -253,6 +266,7 @@ namespace mymuduo
         {
             setState(kDisconnected);
             channel_->disableAll();;   // 将 poller 的所有事件从poller 中del 掉
+            connectionCallback_(shared_from_this());
         }
         channel_->remove();
     }
@@ -271,7 +285,7 @@ namespace mymuduo
 
     void TcpConnection::shutdownInLoop()
     {
-        if(channel_->isWriting()) // 说明 outputbuffer shu'j  全部发送完成
+        if(!channel_->isWriting()) // 说明 outputbuffer   全部发送完成
         {
             socket_->shutdownWrite();
         }

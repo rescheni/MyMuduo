@@ -46,8 +46,6 @@ namespace mymuduo {
 			// 更新 channel  
 			void update(int operation,Channel * channel);
 
-
-
 			using EventList = std::vector<epoll_event>;
 
 			int epollfd_;

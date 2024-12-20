@@ -52,6 +52,7 @@ namespace mymuduo {
 	void Channel::remove()
 	{
 		// ADD code ...
+		loop_->removeChannel(this);
 	}
 
 	// fd_   得到 poller 通知以后 处理 事件 的
@@ -65,6 +66,7 @@ namespace mymuduo {
 			{
 				handleEventWithGuard(receiveTime);
 			}
+
 		}else {
 			handleEventWithGuard(receiveTime);
 		}
@@ -73,42 +75,42 @@ namespace mymuduo {
 	// Private:
 	void Channel::handleEventWithGuard(Timestamp receiveTime)
 	{
+		LOG_INFO("channel handleEvent revents:%d\n", revents_);
 
-		LOG_INFO("channel HandleEvent revents: %d",revents_);
-
-
-		// 根据 具体接收的 事件 执行相应 的 回调操作
-
-		 // EPOLLHUP: 挂起事件（只在 revents 中返回）
-		 // 双端关闭 没有数据 嗯可以读
-		if((revents_ & EPOLLHUP) &&!(revents_ & EPOLLIN) )
+		if ((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN))
 		{
-			if(closeCallback_)
+			if (closeCallback_)
 			{
+				LOG_DEBUG("call close Callback");
 				closeCallback_();
 			}
 		}
 
-		// 直接 错误
-		if(revents_ & EPOLLERR)
+		if (revents_ & EPOLLERR)
 		{
-			if(errorCallback_)
+			if (errorCallback_)
 			{
+				LOG_DEBUG("call error Callback");
 				errorCallback_();
 			}
 		}
 
-		// 进行  读操作
-		if(revents_ & (EPOLLIN | EPOLLPRI ))
+		if (revents_ & (EPOLLIN | EPOLLPRI))
 		{
-			if(readCallback_)
+			if (readCallback_)
 			{
+				LOG_DEBUG("call read Callback");
 				readCallback_(receiveTime);
 			}
 		}
+
+		if (revents_ & EPOLLOUT)
+		{
+			if (writeCallback_)
+			{
+				LOG_DEBUG("call Write Callback");
+				writeCallback_();
+			}
+		}
 	}
-
 }
-
-
-

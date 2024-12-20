@@ -34,7 +34,4 @@ namespace mymuduo
             const int sockfd_;
 
     };
-
-    
-    
 } // namespace mymuduo

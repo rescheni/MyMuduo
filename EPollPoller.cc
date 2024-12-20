@@ -43,6 +43,7 @@ namespace mymuduo {
 
 		if(numEvents > 0)
 		{
+			
 			LOG_INFO("%d,event happened \n",numEvents);
 			fillActiveChannels(numEvents,activeChannels);
 
@@ -81,9 +82,12 @@ namespace mymuduo {
 
 		if(index == kNew || index == kDeleted )
 		{
+
+			LOG_DEBUG("channel 未被注册 直接注册 channel");
 			// channel 未被注册 
 			if(index == kNew)
 			{
+				
 				int fd =  channel->fd();
 				channels_[fd] = channel;
 			}
@@ -108,6 +112,7 @@ namespace mymuduo {
 	{
 		int fd = channel->fd();
 		// 从 channelList 中删除
+		LOG_DEBUG("从 channelList 中删除  channel->fd");
 		channels_.erase(fd);  
 		LOG_INFO("func=%s => fd=%d \n",__FUNCTION__ ,fd);
 		 
@@ -133,20 +138,23 @@ namespace mymuduo {
 	}
 
 	// 更新 channel  epoll_ctl  add / mod / del
-	void EPollPoller::update(int operation,Channel * channel)
+	void EPollPoller::	update(int operation,Channel * channel)
 	{
 		struct epoll_event event;
-		memset(& event,0,sizeof event);
+		// memset(& event,0,sizeof event);
+	    bzero(&event, sizeof event);
+
 		int fd = channel->fd();
 
 		event.events = channel->events();
 		event.data.fd = fd;
 		event.data.ptr = channel;
 
-		
+		LOG_DEBUG("EPollPoller::update =================> OK");
 		if(epoll_ctl(epollfd_,operation,fd,&event) < 0)
 		{
-			if(operation == EPOLL_CTL_ADD)
+			// if(operation == EPOLL_CTL_ADD)
+			if(operation == EPOLL_CTL_DEL)
 			{
 				LOG_ERROR("epoll_ctl del error: %d \n",errno);
 			}else{

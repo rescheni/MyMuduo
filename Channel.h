@@ -29,7 +29,7 @@ namespace mymuduo {
 			void handleEvent(Timestamp receiveTime);
 
 
-			// 设置  回调函数
+			// 设置  回调函数	
 			void setReadCallback(ReadEventCallback cb){readCallback_ = std::move(cb);}
 			void setWriteCallback(EventCallback cb){writeCallback_ = std::move(cb);}
 			void setCloseCallback(EventCallback cb){closeCallback_ = std::move(cb);}
@@ -46,11 +46,11 @@ namespace mymuduo {
 			int set_revents(int revt) { return  revents_ =  revt;}
 
 			// 设置 fd  相应的事件状态 
-			void enableReading(){ events_ |= kReadEvent; update(); }
-			void disableReading(){events_ &= ~kReadEvent;update(); }
-			void enableWriting(){events_ |= kWriteEvent; update(); }
-			void disableWriting(){events_ &= ~kWriteEvent;update();}
-			void disableAll() {events_ = kNoneEvent; update();     }
+			void enableReading() { events_ |= kReadEvent; update(); 	}
+			void disableReading() { events_ &= ~kReadEvent; update(); 	}
+			void enableWriting() { events_ |= kWriteEvent; update(); 	}
+			void disableWriting() { events_ &= ~kWriteEvent; update();  }
+			void disableAll() { events_ = kNoneEvent; update(); 		}
 
 			int index(){return index_;}
 			void setIndex(int idx){index_ = idx;}
@@ -58,8 +58,8 @@ namespace mymuduo {
 
 			//  返回 fd 当前的 事件 状态
 			bool isNoneEvents() const {return events_ == kNoneEvent;}
-			bool isWriting() const {return events_ & kWriteEvent;}
-			bool isReading() const {return events_ & kReadEvent;}
+			bool isWriting()    const {return events_ & kWriteEvent;}
+			bool isReading()   const {return events_ & kReadEvent;}
 
 			//one loop per thread
 			EventLoop * ownerLoop() {return loop_;}

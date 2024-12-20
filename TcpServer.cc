@@ -11,7 +11,7 @@ namespace mymuduo {
 
     	TcpServer::TcpServer(EventLoop *loop,
 			const InetAddress & listenAddr,
-			const std::string nameArg,
+			const std::string & nameArg,
 			Option option)
             : loop_(CheckLoopNotNull(loop))
             , ipPort_(listenAddr.toIpPort())
@@ -21,9 +21,11 @@ namespace mymuduo {
             , connectionCallback_()
             , messageCallback_()
             , nextConnId_(1)
+            , started_(0)
         {
             // 当有新用户链接时  会执行 TcpServer::newConnectionCallback 
-            acceptor_->setNewConnectCallback(std::bind(&TcpServer::newConnection,this,std::placeholders::_1,std::placeholders::_2));
+            acceptor_->setNewConnectCallback(std::bind(&TcpServer::newConnection,this,
+                                            std::placeholders::_1,std::placeholders::_2));
         }
 		
         TcpServer::~TcpServer()
@@ -40,14 +42,22 @@ namespace mymuduo {
             }
         }
 		// 设置底层subloop 的个数
-		void TcpServer::setThreadNum (int 	numThread)
+		void TcpServer::setThreadNum (int numThread)
         {
+            threadPool_->setThreadNum(numThread);            
         } 
 		// 开启服务器 监听
 		void TcpServer::start()
         {
-            threadPool_->start(threadInitCallback_);           // 启动底层的线程池
-            loop_->runInLoop(std::bind(&Acceptor::listen,acceptor_.get()));
+            
+            if(started_ ++ == 0)
+            {
+                LOG_DEBUG("TcpServer::start()  started_ = %d =============> start OK \n",(int)started_);
+                threadPool_->start(threadInitCallback_);           // 启动底层的线程池
+                LOG_DEBUG("底层的线程池 threadPool===========> start OK!");
+                loop_->runInLoop(std::bind(&Acceptor::listen,acceptor_.get()));  
+                LOG_DEBUG("TcpServer runInLoop out =================> OK !");
+            }
         }
         void TcpServer::newConnection(int sockfd,const InetAddress & peerAddress)
         {
@@ -58,7 +68,8 @@ namespace mymuduo {
             ++nextConnId_;
             std::string connName = name_+buffer;
 
-            LOG_INFO("TcpServer::newConnection[%s] - new connection [%s] fropm %s \n",\
+            LOG_DEBUG("一个新连接 来了 ");
+            LOG_INFO("TcpServer::newConnection[%s] - new connection [%s] from %s \n",\
                 name_.c_str(),connName.c_str(),peerAddress.toIpPort().c_str()
             );
             // 通过 socketfd 获取其 绑定的本机的ip地址和 端口信息
@@ -99,6 +110,7 @@ namespace mymuduo {
                 std::bind(&TcpServer::removeConnectionInLoop,this,conn)
             );
         }
+
 		void TcpServer::removeConnectionInLoop(const TcpConnectionPtr & conn)
         {
             LOG_INFO(
@@ -110,6 +122,8 @@ namespace mymuduo {
             ioloop->queeueInLoop(
                 std::bind(&TcpConnection::connectDestroyed,conn)
             );
+
+            LOG_DEBUG("TcpServer::removeConnection remove connection ================>  OK");
         }
 
 }

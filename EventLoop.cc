@@ -26,7 +26,7 @@ namespace mymuduo{
     // 创建 wakeupfd  用来 notify 唤醒subReactor 处理新来的 channel
     int createEventfd()
     {
-        int evtfd = eventfd(0,EFD_NONBLOCK|EFD_CLOEXEC);
+        int evtfd = ::eventfd(0,EFD_NONBLOCK|EFD_CLOEXEC);
 
         if(evtfd < 0)
         {
@@ -45,7 +45,7 @@ namespace mymuduo{
         , poller_(Poller::newDefaultPoller(this))
         , wakeupFd_(createEventfd())
         , wakeupChannel_(new Channel(this,wakeupFd_)) 
-        , currentActiveChannel_(nullptr)
+        // , currentActiveChannel_(nullptr)
     {
         LOG_DEBUG("EventLoop create %p in thread %d \n", this,thread_Id_);
         if(t_loopInThisThread)
@@ -57,6 +57,7 @@ namespace mymuduo{
 
         // 设置 wakeupfd 的 事件类型 和 发生后的 回调操作
         wakeupChannel_->setReadCallback(std::bind(&EventLoop::handleRead,this));
+        LOG_DEBUG("start wakeupChannel_->enableReading() START !!!");
         wakeupChannel_->enableReading();
 
     }
@@ -66,12 +67,7 @@ namespace mymuduo{
         close(wakeupFd_);
         t_loopInThisThread = nullptr;
 
-
     }
-
-
-
-
 
 
     // 开启事件循环
@@ -85,7 +81,7 @@ namespace mymuduo{
         {
             activeChannels_.clear();
             // 监听两个fd 一种 client 的 fd 一种 wakeupfd
-            pollerReturnTime_ = poller_->poll(kPollTimeMs,&activeChannels_);
+            pollerReturnTime_ = poller_ -> poll(kPollTimeMs,&activeChannels_);
 
             for(Channel * channel: activeChannels_)
             {
@@ -94,7 +90,6 @@ namespace mymuduo{
             }
             // 执行当前EventLoop事件循环需要处理的回调操作
             doPendingFunctors();
-
 
         }
 
@@ -114,19 +109,22 @@ namespace mymuduo{
             wakeup();
         }
   
-        quit_ = false;
+        // quit_ = false;
     }
 
 
     // 在当前loop 中 执行 cb
     void EventLoop::runInLoop(Functor cb)
     {
+        LOG_DEBUG("NOW IN EventLoop::runInLoop(Functor cb)");
         // 在当前的 loop 所在的线程中 执行callback
         if(isInLoopThread())
         {
+            LOG_INFO("在当前的 loop 所在的线程中 执行callback \n");
             cb();
         }
         else{       // 在非当前线程 执行 cb | 需要 唤醒loop所在的线程 执行cb
+            LOG_INFO("// 在非当前线程 执行 cb | 需要 唤醒loop所在的线程 执行cb\n");
             queeueInLoop(cb);
         }
     }
@@ -139,7 +137,7 @@ namespace mymuduo{
         }
 
         // 唤醒 相应的， 需要执行上面 回调操作的 loop的线程
-        if(isInLoopThread() || callingPendingFunctions_)   // 代表 当前的 Loop 正在执行 回调 但是 又有新的回调
+        if(!isInLoopThread() || callingPendingFunctions_)   // 代表 当前的 Loop 正在执行 回调 但是 又有新的回调
         {
             wakeup();       // 唤醒 loop 所在的线程
         }   
@@ -147,6 +145,8 @@ namespace mymuduo{
 
     void EventLoop::handleRead()
     {
+
+        LOG_DEBUG("执行EventLoop::handleRead 的 回调函数 \n");
         uint16_t one = 1;
         ssize_t n = read(wakeupFd_,&one,sizeof one);
         if(n != sizeof one)
@@ -198,6 +198,7 @@ namespace mymuduo{
 
         for(const Functor& functor : functors)
         {
+            LOG_DEBUG("// 执行当前loop需要执行的回调操作============> OK");
             functor();      // 执行  当前 loop 的 回调函数
         }
 

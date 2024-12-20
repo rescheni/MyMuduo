@@ -6,7 +6,7 @@
 namespace mymuduo
 {
 
-    static std::atomic_int numCreated_(0);
+    std::atomic_int Thread::numCreated_(0);
 
     Thread::Thread(ThreadFunc func,const std::string &name)
         : started_(false)
@@ -37,7 +37,7 @@ namespace mymuduo
             
             // 获取线程的 TID
             tid_ = CurrentThread::tid();
-            sem_post(&sem);
+            sem_post(&sem); 
 
             //  开启一个新线程
             func_();  

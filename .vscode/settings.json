@@ -62,5 +62,6 @@
         "shared_mutex": "cpp",
         "stop_token": "cpp",
         "cerrno": "cpp"
-    }
+    },
+    "Codegeex.RepoIndex": true
 }

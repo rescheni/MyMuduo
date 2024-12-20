@@ -15,11 +15,15 @@ namespace mymuduo
 
     static int createSocket()
     {
-        int sockfd = ::socket(AF_INET,SOCK_STREAM|SOCK_NONBLOCK|SOCK_CLOEXEC,IPPROTO_TCP);
+        int sockfd = ::socket(AF_INET,SOCK_STREAM|SOCK_NONBLOCK|SOCK_CLOEXEC,0);
+        // int sockfd = ::socket(AF_INET,SOCK_STREAM|SOCK_NONBLOCK|SOCK_CLOEXEC,IPPROTO_TCP);
         if(sockfd  < 0)
         {
             LOG_FATAL("%s:%s:%d|listen Socket  create err : %d  \n",__FILE__,__FUNCTION__,__LINE__,errno);
         }
+
+        LOG_DEBUG("Acceptor::createSocket =========> OK !");
+
         return sockfd;
     }
 
@@ -30,9 +34,10 @@ namespace mymuduo
         , acceptChannel_(loop,acceptSocket_.fd())
         , listenning_(false)
     {
+        // 
         acceptSocket_.setReuseAddr(true);
         acceptSocket_.setReusePort(true);
-        acceptSocket_.bindAddress(listenaddr);
+        acceptSocket_.bindAddress(listenaddr); // bind
 
         acceptChannel_.setReadCallback(std::bind(&Acceptor::handleRead,this));
     }
@@ -46,6 +51,8 @@ namespace mymuduo
     void Acceptor::listen()
     {
         listenning_ = true;
+        LOG_DEBUG("Listen Start ==============>  OK!");
+        acceptSocket_.listen();             // listen
         acceptChannel_.enableReading();      // 注册 acceptChannel =>Poller
     }
 

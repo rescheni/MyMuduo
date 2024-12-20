@@ -1,4 +1,5 @@
 #include "EventLoopThread.h"
+#include "logger.h"
 
 
 namespace mymuduo
@@ -27,15 +28,19 @@ namespace mymuduo
     EventLoop* EventLoopThread::startLoop()
     {
         thread_.start();        // 启动底层的线程
+        LOG_DEBUG(" EventLoopThread::startLoop()  底层线程池启动成功");
         EventLoop *loop = nullptr;
         {
             std::unique_lock<std::mutex> lock(mutex_);
-            while(loop == nullptr)
+            while(loop_ == nullptr)
             {
+                LOG_DEBUG("cond_.wait(lock)ing \n");
                 cond_.wait(lock);
+                LOG_DEBUG("cond_.wait(lock)ing OK!!! \n");
             }
             loop = loop_;
-        }
+        }   
+
         return loop;
 
     }

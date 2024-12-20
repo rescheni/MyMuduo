@@ -138,4 +138,8 @@ CMakeFiles/mymuduo.dir/Socket.o: /home/reschen/muduo/mymuduo/Socket.cc \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /usr/include/linux/close_range.h /usr/include/c++/13/cstring \
- /usr/include/string.h /usr/include/strings.h /usr/include/netinet/tcp.h
+ /usr/include/string.h /usr/include/strings.h /usr/include/netinet/tcp.h \
+ /usr/include/fcntl.h /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+ /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+ /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h

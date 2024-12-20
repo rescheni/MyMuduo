@@ -29,7 +29,7 @@ namespace mymuduo
                 , writerIndex_(kCheapPrepend)
             {}
 
-            ~Buffer();
+            // ~Buffer();
             size_t readableBytes() const
             {
                 return writerIndex_ - readerIndex_ ;
@@ -43,6 +43,12 @@ namespace mymuduo
 			{
 				return  readerIndex_;
 			}
+			const char* peek() const 
+			{
+				return  begin() + readerIndex_;
+			}
+
+
 			ssize_t readFd(int fd,int * saveErrno);
 
 			ssize_t writeFd(int fd,int *saveErrno);
@@ -123,10 +129,6 @@ namespace mymuduo
 				return &*buffer_.begin();
 			}
 
-			const char* peek() const 
-			{
-				return  begin() + readerIndex_;
-			}
 
 			void makeSpace(size_t len)	// !!!!
 			{

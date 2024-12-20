@@ -8,6 +8,10 @@
 #include "noncopyable.h"
 #include "EventLoopThreadPool.h"
 #include "Callbacks.h"
+#include "TcpConnection.h"
+#include "logger.h"
+#include "Buffer.h"
+
 
 #include <functional>
 #include <string>
@@ -33,7 +37,7 @@ namespace mymuduo {
 
 			TcpServer(EventLoop *loop,
 					const InetAddress & listenAddr,
-					const std::string nameArg,
+					const std::string & nameArg,
 					Option option = kNoReusePort);
 			~TcpServer();
 
