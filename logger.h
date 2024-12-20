@@ -46,7 +46,7 @@
 		exit(-1);							\
 	}while (0)
 
-#define DEB
+// #define DEB
 
 #ifdef DEB
 #define LOG_DEBUG(logmsgFormat,...)			\
