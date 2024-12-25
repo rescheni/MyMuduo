@@ -1,5 +1,5 @@
-CMakeFiles/mymuduo.dir/Thread.o: /home/reschen/muduo/mymuduo/Thread.cc \
- /usr/include/stdc-predef.h /home/reschen/muduo/mymuduo/Thread.h \
+CMakeFiles/mymuduo.dir/Thread.o: /home/reschen/muduo/MyMuduo/Thread.cc \
+ /usr/include/stdc-predef.h /home/reschen/muduo/MyMuduo/Thread.h \
  /usr/include/c++/13/functional \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -157,8 +157,8 @@ CMakeFiles/mymuduo.dir/Thread.o: /home/reschen/muduo/mymuduo/Thread.cc \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/basic_string.tcc /usr/include/c++/13/atomic \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/CurrentThread.h \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/CurrentThread.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \

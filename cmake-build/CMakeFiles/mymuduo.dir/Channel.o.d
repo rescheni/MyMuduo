@@ -1,4 +1,4 @@
-CMakeFiles/mymuduo.dir/Channel.o: /home/reschen/muduo/mymuduo/Channel.cc \
+CMakeFiles/mymuduo.dir/Channel.o: /home/reschen/muduo/MyMuduo/Channel.cc \
  /usr/include/stdc-predef.h /usr/include/x86_64-linux-gnu/sys/epoll.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -39,7 +39,7 @@ CMakeFiles/mymuduo.dir/Channel.o: /home/reschen/muduo/mymuduo/Channel.cc \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
  /usr/include/x86_64-linux-gnu/bits/epoll.h \
- /home/reschen/muduo/mymuduo/Channel.h /usr/include/c++/13/functional \
+ /home/reschen/muduo/MyMuduo/Channel.h /usr/include/c++/13/functional \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
@@ -121,8 +121,8 @@ CMakeFiles/mymuduo.dir/Channel.o: /home/reschen/muduo/mymuduo/Channel.cc \
  /usr/include/c++/13/backward/auto_ptr.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h \
  /usr/include/c++/13/initializer_list \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/Timestamp.h /usr/include/c++/13/cstdint \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/Timestamp.h /usr/include/c++/13/cstdint \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/char_traits.h \
  /usr/include/c++/13/bits/localefwd.h \
@@ -167,7 +167,7 @@ CMakeFiles/mymuduo.dir/Channel.o: /home/reschen/muduo/mymuduo/Channel.cc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/reschen/muduo/mymuduo/EventLoop.h /usr/include/c++/13/atomic \
+ /home/reschen/muduo/MyMuduo/EventLoop.h /usr/include/c++/13/atomic \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/mutex \
@@ -176,7 +176,7 @@ CMakeFiles/mymuduo.dir/Channel.o: /home/reschen/muduo/mymuduo/Channel.cc \
  /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /home/reschen/muduo/mymuduo/CurrentThread.h \
+ /home/reschen/muduo/MyMuduo/CurrentThread.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
@@ -187,4 +187,4 @@ CMakeFiles/mymuduo.dir/Channel.o: /home/reschen/muduo/mymuduo/Channel.cc \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /home/reschen/muduo/mymuduo/logger.h
+ /usr/include/linux/close_range.h /home/reschen/muduo/MyMuduo/logger.h

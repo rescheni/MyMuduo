@@ -122,8 +122,6 @@ namespace mymuduo {
 			update(EPOLL_CTL_DEL,channel);
 		}
 		channel->setIndex(kNew);
-
-
 	}
 
 	// 填写 活跃的 连接

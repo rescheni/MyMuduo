@@ -1,4 +1,4 @@
-CMakeFiles/mymuduo.dir/logger.o: /home/reschen/muduo/mymuduo/logger.cc \
+CMakeFiles/mymuduo.dir/logger.o: /home/reschen/muduo/MyMuduo/logger.cc \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -144,9 +144,9 @@ CMakeFiles/mymuduo.dir/logger.o: /home/reschen/muduo/mymuduo/logger.cc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/reschen/muduo/mymuduo/logger.h \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/Timestamp.h /usr/include/c++/13/cstdint \
+ /home/reschen/muduo/MyMuduo/logger.h \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/Timestamp.h /usr/include/c++/13/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h

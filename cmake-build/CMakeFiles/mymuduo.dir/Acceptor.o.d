@@ -1,9 +1,9 @@
 CMakeFiles/mymuduo.dir/Acceptor.o: \
- /home/reschen/muduo/mymuduo/Acceptor.cc /usr/include/stdc-predef.h \
- /home/reschen/muduo/mymuduo/Acceptor.h \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/Socket.h \
- /home/reschen/muduo/mymuduo/InetAddress.h /usr/include/arpa/inet.h \
+ /home/reschen/muduo/MyMuduo/Acceptor.cc /usr/include/stdc-predef.h \
+ /home/reschen/muduo/MyMuduo/Acceptor.h \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/Socket.h \
+ /home/reschen/muduo/MyMuduo/InetAddress.h /usr/include/arpa/inet.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -132,7 +132,7 @@ CMakeFiles/mymuduo.dir/Acceptor.o: \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/hash_bytes.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/reschen/muduo/mymuduo/Channel.h /usr/include/c++/13/functional \
+ /home/reschen/muduo/MyMuduo/Channel.h /usr/include/c++/13/functional \
  /usr/include/c++/13/tuple /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/typeinfo \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
@@ -169,7 +169,7 @@ CMakeFiles/mymuduo.dir/Acceptor.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h \
- /home/reschen/muduo/mymuduo/Timestamp.h /usr/include/c++/13/iostream \
+ /home/reschen/muduo/MyMuduo/Timestamp.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/ostream /usr/include/c++/13/ios \
  /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h \
@@ -188,7 +188,7 @@ CMakeFiles/mymuduo.dir/Acceptor.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/reschen/muduo/mymuduo/logger.h /usr/include/unistd.h \
+ /home/reschen/muduo/MyMuduo/logger.h /usr/include/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \

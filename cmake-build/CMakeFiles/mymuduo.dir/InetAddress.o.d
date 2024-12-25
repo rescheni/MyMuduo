@@ -1,6 +1,6 @@
 CMakeFiles/mymuduo.dir/InetAddress.o: \
- /home/reschen/muduo/mymuduo/InetAddress.cc /usr/include/stdc-predef.h \
- /home/reschen/muduo/mymuduo/InetAddress.h /usr/include/arpa/inet.h \
+ /home/reschen/muduo/MyMuduo/InetAddress.cc /usr/include/stdc-predef.h \
+ /home/reschen/muduo/MyMuduo/InetAddress.h /usr/include/arpa/inet.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \

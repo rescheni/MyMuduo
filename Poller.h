@@ -37,8 +37,6 @@ namespace mymuduo {
 			// EventLoop 可以 通过该接口 获取 默认 的 IO 复用的 具体实现
 			static Poller * newDefaultPoller(EventLoop * loop);
 
-
-
 		protected:
 			// 	Map 的 Key  sockfd value ：sockfd 所属的 channel 通道类型
 			// 	通过 sockfd  快速 查找 sockfd  所属的 通道

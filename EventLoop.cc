@@ -143,6 +143,8 @@ namespace mymuduo{
         }   
     }
 
+
+
     void EventLoop::handleRead()
     {
 
@@ -189,7 +191,7 @@ namespace mymuduo{
     void EventLoop::doPendingFunctors()		// 执行回调函数
     {
         std::vector<Functor> functors;
-        callingPendingFunctions_ = true;
+        callingPendingFunctions_ = true;    // 需要执行回调
 
         {
             std::unique_lock<std::mutex> lock(mutex_);

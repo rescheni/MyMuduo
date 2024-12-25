@@ -1,7 +1,7 @@
 CMakeFiles/mymuduo.dir/EPollPoller.o: \
- /home/reschen/muduo/mymuduo/EPollPoller.cc /usr/include/stdc-predef.h \
- /home/reschen/muduo/mymuduo/EPollPoller.h \
- /home/reschen/muduo/mymuduo/EventLoop.h /usr/include/c++/13/functional \
+ /home/reschen/muduo/MyMuduo/EPollPoller.cc /usr/include/stdc-predef.h \
+ /home/reschen/muduo/MyMuduo/EPollPoller.h \
+ /home/reschen/muduo/MyMuduo/EventLoop.h /usr/include/c++/13/functional \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -129,8 +129,8 @@ CMakeFiles/mymuduo.dir/EPollPoller.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/Timestamp.h /usr/include/c++/13/iostream \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/Timestamp.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/ostream /usr/include/c++/13/ios \
  /usr/include/c++/13/bits/char_traits.h \
  /usr/include/c++/13/bits/localefwd.h \
@@ -173,7 +173,7 @@ CMakeFiles/mymuduo.dir/EPollPoller.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/reschen/muduo/mymuduo/CurrentThread.h \
+ /home/reschen/muduo/MyMuduo/CurrentThread.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
@@ -184,7 +184,7 @@ CMakeFiles/mymuduo.dir/EPollPoller.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h /home/reschen/muduo/mymuduo/Poller.h \
+ /usr/include/linux/close_range.h /home/reschen/muduo/MyMuduo/Poller.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
@@ -193,7 +193,7 @@ CMakeFiles/mymuduo.dir/EPollPoller.o: \
  /usr/include/c++/13/bits/erase_if.h \
  /usr/include/x86_64-linux-gnu/sys/epoll.h \
  /usr/include/x86_64-linux-gnu/bits/epoll.h \
- /home/reschen/muduo/mymuduo/logger.h \
- /home/reschen/muduo/mymuduo/Channel.h /usr/include/c++/13/utility \
+ /home/reschen/muduo/MyMuduo/logger.h \
+ /home/reschen/muduo/MyMuduo/Channel.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h

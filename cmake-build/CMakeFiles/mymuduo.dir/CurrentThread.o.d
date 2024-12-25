@@ -1,6 +1,6 @@
 CMakeFiles/mymuduo.dir/CurrentThread.o: \
- /home/reschen/muduo/mymuduo/CurrentThread.cc /usr/include/stdc-predef.h \
- /home/reschen/muduo/mymuduo/CurrentThread.h \
+ /home/reschen/muduo/MyMuduo/CurrentThread.cc /usr/include/stdc-predef.h \
+ /home/reschen/muduo/MyMuduo/CurrentThread.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \

@@ -79,7 +79,6 @@ namespace mymuduo
 				return retrieveAsString(readableBytes());	//  应用 可读取的长度
 			}
 
-			
 			std::string retrieveAsString(size_t len)
 			{
 				std::string result(peek(),len);

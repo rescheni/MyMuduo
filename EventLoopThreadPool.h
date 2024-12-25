@@ -47,8 +47,6 @@ namespace mymuduo
             int next_;
             std::vector<std::unique_ptr<EventLoopThread>> thread_;      // 包含所有创建事件的线程
             std::vector<EventLoop*> loops_;                             // 包含所有创建事件线程的指针
-
-
     };
 
 

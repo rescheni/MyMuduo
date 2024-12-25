@@ -38,10 +38,8 @@ namespace mymuduo
             // 获取线程的 TID
             tid_ = CurrentThread::tid();
             sem_post(&sem); 
-
             //  开启一个新线程
             func_();  
-
         }));
         // 等待 获取上面创建新线程的 tid 值
         sem_wait(&sem);

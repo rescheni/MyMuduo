@@ -1,5 +1,5 @@
-CMakeFiles/mymuduo.dir/Buffer.o: /home/reschen/muduo/mymuduo/Buffer.cc \
- /usr/include/stdc-predef.h /home/reschen/muduo/mymuduo/Buffer.h \
+CMakeFiles/mymuduo.dir/Buffer.o: /home/reschen/muduo/MyMuduo/Buffer.cc \
+ /usr/include/stdc-predef.h /home/reschen/muduo/MyMuduo/Buffer.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

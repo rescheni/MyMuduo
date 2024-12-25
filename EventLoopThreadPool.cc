@@ -63,7 +63,6 @@ namespace mymuduo
             {
                 next_ = 0;
             }
-
         }
         return loop;
     }

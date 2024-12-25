@@ -81,7 +81,7 @@ namespace mymuduo {
 			int revents_;				// poller 返回 及具体发生的事件
 			int index_;
 
-			std::weak_ptr<void> tie_;
+			std::weak_ptr<void> tie_;	// 这里定义了 弱智能指针，可以避免循环引用
 			
 			bool tied_;
 

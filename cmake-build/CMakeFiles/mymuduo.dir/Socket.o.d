@@ -1,7 +1,7 @@
-CMakeFiles/mymuduo.dir/Socket.o: /home/reschen/muduo/mymuduo/Socket.cc \
- /usr/include/stdc-predef.h /home/reschen/muduo/mymuduo/Socket.h \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/InetAddress.h /usr/include/arpa/inet.h \
+CMakeFiles/mymuduo.dir/Socket.o: /home/reschen/muduo/MyMuduo/Socket.cc \
+ /usr/include/stdc-predef.h /home/reschen/muduo/MyMuduo/Socket.h \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/InetAddress.h /usr/include/arpa/inet.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -130,7 +130,7 @@ CMakeFiles/mymuduo.dir/Socket.o: /home/reschen/muduo/mymuduo/Socket.cc \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/hash_bytes.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /home/reschen/muduo/mymuduo/logger.h /usr/include/unistd.h \
+ /home/reschen/muduo/MyMuduo/logger.h /usr/include/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \

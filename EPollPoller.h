@@ -21,8 +21,6 @@
 
 
 namespace mymuduo {
-
-
 	class Channel;
 
 	class EPollPoller : public Poller

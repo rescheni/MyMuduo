@@ -1,6 +1,6 @@
 CMakeFiles/mymuduo.dir/Timestamp.o: \
- /home/reschen/muduo/mymuduo/Timestamp.cc /usr/include/stdc-predef.h \
- /home/reschen/muduo/mymuduo/Timestamp.h /usr/include/c++/13/cstdint \
+ /home/reschen/muduo/MyMuduo/Timestamp.cc /usr/include/stdc-predef.h \
+ /home/reschen/muduo/MyMuduo/Timestamp.h /usr/include/c++/13/cstdint \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

@@ -1,8 +1,8 @@
 CMakeFiles/mymuduo.dir/DefaultPoller.o: \
- /home/reschen/muduo/mymuduo/DefaultPoller.cc /usr/include/stdc-predef.h \
- /home/reschen/muduo/mymuduo/Poller.h \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/Timestamp.h /usr/include/c++/13/cstdint \
+ /home/reschen/muduo/MyMuduo/DefaultPoller.cc /usr/include/stdc-predef.h \
+ /home/reschen/muduo/MyMuduo/Poller.h \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/Timestamp.h /usr/include/c++/13/cstdint \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -161,8 +161,8 @@ CMakeFiles/mymuduo.dir/DefaultPoller.o: \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/reschen/muduo/mymuduo/EPollPoller.h \
- /home/reschen/muduo/mymuduo/EventLoop.h /usr/include/c++/13/functional \
+ /home/reschen/muduo/MyMuduo/EPollPoller.h \
+ /home/reschen/muduo/MyMuduo/EventLoop.h /usr/include/c++/13/functional \
  /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/atomic \
  /usr/include/c++/13/bits/atomic_base.h \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
@@ -181,7 +181,7 @@ CMakeFiles/mymuduo.dir/DefaultPoller.o: \
  /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /home/reschen/muduo/mymuduo/CurrentThread.h \
+ /home/reschen/muduo/MyMuduo/CurrentThread.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \

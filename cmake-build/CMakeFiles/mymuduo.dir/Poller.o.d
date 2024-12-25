@@ -1,7 +1,7 @@
-CMakeFiles/mymuduo.dir/Poller.o: /home/reschen/muduo/mymuduo/Poller.cc \
- /usr/include/stdc-predef.h /home/reschen/muduo/mymuduo/Poller.h \
- /home/reschen/muduo/mymuduo/noncopyable.h \
- /home/reschen/muduo/mymuduo/Timestamp.h /usr/include/c++/13/cstdint \
+CMakeFiles/mymuduo.dir/Poller.o: /home/reschen/muduo/MyMuduo/Poller.cc \
+ /usr/include/stdc-predef.h /home/reschen/muduo/MyMuduo/Poller.h \
+ /home/reschen/muduo/MyMuduo/noncopyable.h \
+ /home/reschen/muduo/MyMuduo/Timestamp.h /usr/include/c++/13/cstdint \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -160,7 +160,7 @@ CMakeFiles/mymuduo.dir/Poller.o: /home/reschen/muduo/mymuduo/Poller.cc \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/reschen/muduo/mymuduo/Channel.h /usr/include/c++/13/functional \
+ /home/reschen/muduo/MyMuduo/Channel.h /usr/include/c++/13/functional \
  /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
